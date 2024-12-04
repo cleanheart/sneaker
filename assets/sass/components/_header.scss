@@ -1,0 +1,15 @@
+/******Header Start*********/
+header {
+  background: #f75300;
+  .header-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    a {
+      font-size: 18px;
+      color: $white-color;
+      font-weight: 500;
+      text-transform: uppercase;
+    }
+  }
+}

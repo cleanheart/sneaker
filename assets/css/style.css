@@ -1,0 +1,240 @@
+/*
+Theme Name: Sneakerfanatic - HTML Template
+Author: WebritoTheme
+Author URI: https://themeforest.net/user/webritotheme
+Tags:  Sneakerfanatic
+Description: Sneakerfanatic - HTML Template
+Version: 1.1.0
+*/
+/************************************** base css **************************************/
+/******* Google Fonts *********/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+/******** Custom Font ****************/
+@font-face {
+  font-family: "OwnersNarrowBold";
+  src: url("../../fonts/owners-narrow-bold.woff2") format("woff2"), url("../../fonts/owners-narrow-bold.woff") format("woff"), url("../../fonts/owners-narrow-bold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+/******** root ****************/
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px; }
+
+input {
+  outline: 0; }
+
+select {
+  outline: 0;
+  border: 0; }
+
+a {
+  text-decoration: none;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s; }
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 0; }
+
+button {
+  border: 0;
+  background-color: transparent; }
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+  color: #121111;
+  font-family: "OwnersNarrowBold", Arial, sans-serif; }
+
+h1,
+.h1,
+h2,
+.h2 {
+  font-family: "OwnersNarrowBold", Arial, sans-serif; }
+
+.h1,
+h1 {
+  font-size: 48px; }
+  @media (max-width: 991.98px) {
+    .h1,
+    h1 {
+      font-size: 42px; } }
+
+.h2,
+h2 {
+  font-size: 40px; }
+  @media (max-width: 991.98px) {
+    .h2,
+    h2 {
+      font-size: 32px; } }
+
+.h3,
+h3 {
+  font-size: 32px; }
+  @media (max-width: 991.98px) {
+    .h3,
+    h3 {
+      font-size: 28px; } }
+
+.pt-120 {
+  padding-top: 100px; }
+  @media (max-width: 767.98px) {
+    .pt-120 {
+      padding-top: 70px; } }
+
+.ptb-120 {
+  padding: 100px 0; }
+  @media (max-width: 767.98px) {
+    .ptb-120 {
+      padding: 70px 0; } }
+
+.ptb-60 {
+  padding: 60px 0; }
+
+.pt-30 {
+  padding-top: 30px; }
+
+.pt-40 {
+  padding-top: 40px; }
+
+.pb-30 {
+  padding-bottom: 30px; }
+
+.pb-40 {
+  padding-bottom: 40px; }
+
+.pb-120 {
+  padding-bottom: 100px; }
+  @media (max-width: 767.98px) {
+    .pb-120 {
+      padding-bottom: 70px; } }
+
+.mt-32 {
+  margin-top: 32px; }
+
+.mt-40 {
+  margin-top: 40px; }
+
+.mt-50 {
+  margin-top: 50px; }
+
+.mt-60 {
+  margin-top: 60px; }
+
+.mt-80 {
+  margin-top: 80px; }
+
+.mb-32 {
+  margin-bottom: 32px; }
+
+.mb-40 {
+  margin-bottom: 40px; }
+
+.mb-50 {
+  margin-bottom: 50px; }
+
+.mb-60 {
+  margin-bottom: 60px; }
+
+/******************************** components ******************************/
+/******Header Start*********/
+header {
+  background: #f75300; }
+  header .header-top {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
+    header .header-top a {
+      font-size: 18px;
+      color: #ffffff;
+      font-weight: 500;
+      text-transform: uppercase; }
+
+/********* Footer *********/
+/******** Footer Top Start *******/
+.footer-widget span {
+  color: var(--footer-widget-color);
+  font-size: 16px;
+  font-weight: 600; }
+
+.footer-widget .footer-content {
+  margin-top: 20px; }
+  .footer-widget .footer-content li {
+    margin-bottom: 12px; }
+    .footer-widget .footer-content li a {
+      color: var(--paragraph-color);
+      -webkit-transition: 0.3s;
+      -o-transition: 0.3s;
+      transition: 0.3s; }
+      .footer-widget .footer-content li a:hover {
+        color: var(--hero-title-color); }
+  .footer-widget .footer-content :last-child {
+    margin-bottom: 0; }
+
+/******** Footer Top End *******/
+/******** Footer Bottom Start *******/
+.footer-bottom-bg {
+  left: 0;
+  top: 0;
+  -o-object-fit: cover;
+  object-fit: cover;
+  width: 100%;
+  z-index: -1; }
+
+.footer-bottom-content {
+  padding: 80px 0 40px 0; }
+
+.footer-bottom-copyright p {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 26px;
+  font-family: "Poppins", sans-serif; }
+  .footer-bottom-copyright p a {
+    color: #ffffff;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s; }
+    .footer-bottom-copyright p a:hover {
+      color: #121111; }
+
+.footer-logo {
+  gap: 10px; }
+
+.footer-privacy {
+  gap: 6px; }
+  .footer-privacy li {
+    color: #ffffff; }
+    .footer-privacy li a {
+      color: #ffffff;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 26px;
+      font-family: "Poppins", sans-serif; }
+
+/******** Footer Bottom End *******/
+/****************************** page styles ******************************/
+/******************************* theme css **********************************/
+.container {
+  max-width: 1650px;
+  margin: 0 auto;
+  padding: 0 10px; }
