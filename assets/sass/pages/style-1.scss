@@ -1,0 +1,108 @@
+/******* Service Section Start ***********/
+.service-section {
+  background-color: $secondary-color;
+  padding: 60px 0;
+}
+
+.service-top {
+  margin: 0 30px;
+  @include portrait-phone {
+    display: block !important;
+    margin: 0 10px;
+  }
+}
+
+.service-title {
+  @include portrait-phone {
+    text-align: center;
+  }
+  h2 {
+    color: $white-color;
+    font-size: 80px;
+    @include screen-992 {
+      font-size: 65px;
+    }
+    @include screen-992 {
+      font-size: 50px;
+    }
+    @include screen-460 {
+      font-size: 40px;
+    }
+  }
+}
+
+.service-btn {
+  @include portrait-phone {
+    text-align: center;
+  }
+  a {
+    @include screen-768 {
+      padding: 7px 12px;
+    }
+  }
+}
+.service-item {
+  margin: 0 30px;
+  margin-top: 48px;
+  @include portrait-phone {
+    margin: 0 10px;
+  }
+  @include screen-460 {
+    margin-top: 20px;
+  }
+}
+
+.service-card {
+  background-color: $white-color;
+  border-radius: 10px;
+}
+
+.service-thumb {
+  padding: 8px 8px 0 8px;
+  position: relative;
+  img {
+    width: 100%;
+  }
+  .service-step {
+    position: absolute;
+    right: 20px;
+    top: 22px;
+    background-color: $white-color;
+    color: $primary-color;
+    padding: 1px 10px;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 11px;
+    display: inline-block;
+  }
+}
+
+.service-content {
+  padding: 27px 40px 40px 43px;
+  text-align: center;
+  h3 {
+    font-size: 30px;
+    line-height: 45px;
+    margin-bottom: 7px;
+    @include screen-460 {
+      font-size: 22px;
+    }
+  }
+  p {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 28px;
+    color: $primary-color;
+    @include screen-460 {
+      font-size: 15px;
+    }
+  }
+}
+
+.service-content-two {
+  padding: 27px 40px 68px 43px;
+  @include screen-1260 {
+    padding: 27px 40px 40px 43px;
+  }
+}
+/******* Service Section End ***********/
