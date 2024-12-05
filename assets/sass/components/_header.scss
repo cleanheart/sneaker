@@ -1,6 +1,11 @@
 /******Header Start*********/
 header {
-  background: #f75300;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  background: transparent;
   .header-top {
     padding: 16px 0;
     display: flex;
