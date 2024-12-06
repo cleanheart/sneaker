@@ -50,7 +50,7 @@ header {
     .nav {
       display: flex;
       gap: 50px;
-      margin-left: 205px;
+      margin-left: -150px;
       li {
         a {
           color: $white-color;
@@ -86,7 +86,6 @@ header {
       }
     }
     .user-cart {
-      margin-left: auto;
       display: flex;
       align-items: center;
       gap: 25px;
@@ -98,6 +97,28 @@ header {
         }
         &:hover {
           img {
+            animation: 0.3s toLeftFromRight forwards;
+          }
+        }
+      }
+      @include screen-992 {
+        margin-left: auto;
+      }
+      @include screen-460 {
+        display: none !important;
+      }
+    }
+    .user-cart-2 {
+      display: none;
+      align-items: center;
+      gap: 25px;
+      a {
+        font-size: 22px;
+        color: #000;
+
+        &:hover {
+          i {
+            display: inline-block;
             animation: 0.3s toLeftFromRight forwards;
           }
         }
@@ -163,20 +184,47 @@ header {
   z-index: 10;
   animation: 1s custom-fadeInDown;
   background-color: $white-color;
+  .header-top {
+    display: none;
+  }
   .container {
     max-width: 100%;
     padding: 0;
     background-color: $white-color;
+    padding: 0 10px;
 
     .content-wrapper {
       max-width: 1400px;
       margin: 0 auto;
-      .top {
-        display: none !important;
-      }
-      .bottom {
-        border-radius: 0;
-        box-shadow: none;
+      .header-nav {
+        .header-logo {
+          color: #000;
+        }
+        .nav {
+          margin-left: 0 !important;
+          li {
+            a {
+              color: #000;
+              &::after {
+                background: #000;
+              }
+            }
+          }
+        }
+        .user-cart {
+          display: none !important;
+        }
+        .user-cart-2 {
+          display: flex !important;
+          @include screen-460 {
+            display: none !important;
+          }
+        }
+        .mobile-menu-icon {
+          span {
+            background: #000;
+          }
+        }
       }
     }
   }
@@ -190,6 +238,8 @@ header {
   width: 330px;
   height: 100vh;
   transition: all 0.3s;
+  z-index: 15;
+  overflow: scroll;
 
   &.active {
     left: 0 !important;
@@ -211,7 +261,7 @@ header {
     }
     .mobile-menu-icon {
       margin-left: 30px;
-      width: 30px;
+      width: 20px;
       height: 20px;
       cursor: pointer;
       display: flex;
@@ -270,7 +320,7 @@ header {
         transition: 0.3s;
         align-items: center;
         justify-content: space-between;
-        border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+        border-bottom: 1px solid rgba($secondary-color, 0.3%);
         .icon {
           display: inline-block;
           transform: rotate(0deg);
@@ -298,6 +348,10 @@ header {
       margin-top: 20px;
       width: 100%;
       justify-content: center;
+      font-weight: 500;
+      height: 40px;
+      font-size: 17px;
+      letter-spacing: 2px;
     }
   }
 }

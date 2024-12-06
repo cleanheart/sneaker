@@ -1,245 +1,297 @@
 /********* Hero Section Start *********/
 .hero-area {
-  overflow: hidden;
-  padding-top: 200px;
-  padding-bottom: 250px;
-  background: url("../../assets/images/hero-bg.png");
-  background-position: center;
-  background-size: cover;
   position: relative;
-  .hero-left {
-    position: absolute;
-    left: 0px;
-    bottom: 0px;
+  padding: 165px 0px 222px 0;
+  @include screen-992 {
+    background: $secondary-color;
   }
-  .hero-shape-1 {
+  @include screen-460 {
+    padding: 100px 0px 50px 0;
+  }
+
+  .hero-bg-shape {
     position: absolute;
+    right: 0;
     bottom: 0;
-    right: 5%;
     z-index: -1;
+  }
+  .hero-bg-1 {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+    height: 100%;
+    @include screen-1300 {
+      min-height: 1080px;
+    }
+    @include screen-992 {
+      display: none;
+    }
+  }
+  .hero-left-img {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    gap: 25px;
+    bottom: 35px;
+    left: 2%;
+    img {
+      min-height: 215px;
+    }
+    @include screen-1300 {
+      display: none;
+    }
   }
 
   .content-wrapper {
     display: flex;
-    .right {
-      z-index: 10;
-      margin-left: 15%;
-      .main-pen {
-        margin-top: 40px;
-        position: relative;
-        img {
-          max-width: 673px;
-          height: 80px;
-          position: absolute;
-          top: -50px;
-          right: 35%;
+    justify-content: space-between;
+    position: relative;
+
+    .right-wrapper {
+      margin-left: auto;
+      .title-wrapper {
+        margin-right: 80px;
+        text-align: center;
+        .fst-title {
+          letter-spacing: 3px;
+          color: $white-color;
+          font-size: 124px;
+          text-shadow: 3px 4px 0 #852f00;
+          text-transform: uppercase;
+          line-height: 99px;
+          position: relative;
+          .pen {
+            display: inline-block;
+            position: relative;
+            &::after {
+              position: absolute;
+              content: "";
+              bottom: -5px;
+              right: 3px;
+              width: 15px;
+              height: 130px;
+              z-index: 5;
+              background: url("../../assets/images/pen-1.png");
+              @include portrait-phone {
+                bottom: -5px;
+                right: 1px;
+                width: 14px;
+                height: 77px;
+              }
+            }
+          }
+        }
+        .title-2 {
+          color: #c23400;
+          font-size: 124px;
+          text-shadow: 2px 2px 2px #fc8c55;
+          text-transform: uppercase;
+          line-height: 99px;
+          letter-spacing: 10px;
+          margin: 30px 0 40px 0;
         }
       }
-    }
-  }
-  .title-wrapper {
-    .img-wrapper {
-      max-width: 1123px;
-      min-height: 90px;
-      position: relative;
-      .hero-text {
-        z-index: 5;
-        position: absolute;
-        top: 0;
-        left: 0;
-      }
-      .hero-text-before {
-        position: absolute;
-        top: 3px;
-        left: 3px;
-        z-index: 3;
-      }
-      .pen-1 {
-        width: 15px;
-        height: 130px;
-        position: absolute;
-        bottom: 0;
-        right: 188px;
-      }
-    }
-    h1 {
-      font-size: 124px;
-      color: #c23400;
-      text-transform: uppercase;
-      font-weight: 700;
-      margin-left: 47px;
-    }
-  }
-  .last-title-wrapper {
-    text-align: center;
-    cursor: pointer;
-  }
-  .text-icon {
-    margin-top: 20px;
-    padding-bottom: 40px;
-    display: flex;
-    align-items: center;
-    gap: 13px;
-    .inner {
-      display: flex;
-      gap: 8px;
-      padding-right: 9.5px;
-      border-right: 1px solid rgba($white-color, 0.5);
-      .icon {
-        width: 25px;
-        height: 25px;
-        border-radius: 50%;
+      .prize-wrapper {
         display: flex;
         align-items: center;
         justify-content: center;
-        background: $white-color;
-        flex-shrink: 0;
+        .prize-1 {
+          text-transform: uppercase;
+          color: #bb3f00;
+          display: flex;
+          align-items: center;
+          letter-spacing: 3px;
+          .border-eight {
+            width: 1px;
+            height: 35px;
+            border-radius: 6px;
+            margin: 0 19px 0 17px;
+            background: $white-color;
+            display: inline-block;
+          }
+          .white-color {
+            color: $white-color;
+            text-shadow: 3px 3px 0 #c23400;
+          }
+        }
+        .prize-2 {
+          font-size: 66px;
+          line-height: 72px;
+          color: $white-color;
+          margin-left: 20px;
+          text-shadow: 3px 3px 0 #c23400;
+        }
       }
+      .text-icon {
+        margin-top: 20px;
+        padding-bottom: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 13px;
+        .inner {
+          max-width: 242px;
+          display: flex;
+          gap: 8px;
+          padding-right: 9.5px;
+          border-right: 1px solid rgba($white-color, 0.5);
+          .icon {
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: $white-color;
+            flex-shrink: 0;
+          }
 
-      p {
-        font-size: 19px;
-        font-weight: 500;
-        color: $white-color;
-        line-height: 30px;
-        font-family: $body-font;
+          p {
+            font-size: 19px;
+            font-weight: 500;
+            color: $white-color;
+            line-height: 30px;
+            font-family: $body-font;
+          }
+        }
+        .last-inner {
+          padding-right: 0;
+          border-right: none;
+        }
+        .template-btn {
+          margin-left: 15px;
+        }
+        @include portrait-phone {
+          gap: 3px;
+          .inner {
+            border: none;
+
+            p {
+              font-size: 16px;
+            }
+          }
+        }
       }
-    }
-    .last-inner {
-      padding-right: 0;
-      border-right: none;
+      .main-pen {
+        margin-left: 15%;
+      }
+      @include screen-1300 {
+        .title-wrapper {
+          margin-right: 0;
+          .fst-title {
+            font-size: 99px;
+          }
+          .title-2 {
+            font-size: 99px;
+          }
+        }
+        .text-icon {
+          flex-wrap: wrap;
+        }
+        .main-pen {
+          margin-left: 13%;
+        }
+      }
+      @include screen-992 {
+        .title-wrapper {
+          .fst-title {
+            max-width: 550px;
+            margin: auto;
+            &::after {
+              right: 164px;
+            }
+          }
+        }
+        .main-pen {
+          display: none;
+        }
+      }
+      @include portrait-phone {
+        .title-wrapper {
+          .fst-title {
+            max-width: 330px;
+            font-size: 55px;
+            line-height: 60px;
+            &::after {
+              right: 30%;
+              width: 14px;
+              height: 81px;
+            }
+          }
+          .title-2 {
+            line-height: 70px;
+            letter-spacing: 5px;
+            margin: 5px 0 0px 0;
+            font-size: 45px;
+          }
+        }
+        .prize-wrapper {
+          .prize-1 {
+            font-size: 23px;
+            letter-spacing: 2px;
+            .border-eight {
+              margin: 0 10px;
+            }
+          }
+          .prize-2 {
+            font-size: 39px;
+          }
+        }
+      }
     }
   }
 }
 /********* Hero Section End *********/
 
 /******* Surface Section Start ***********/
-.surface-section {
-  padding: 30px 0;
-}
 
-.surface-content {
-  @include portrait-phone {
-    display: block !important;
-  }
-}
-.surface-content-title {
-  h2 {
-    font-size: 80px;
-    line-height: 70px;
-    color: $primary-color;
-    text-transform: uppercase;
-    span {
-      color: $secondary-color;
-    }
-    @include screen-1400 {
-      font-size: 65px;
-      line-height: 60px;
-    }
-    @include screen-1150 {
-      font-size: 50px;
-      line-height: 50px;
-    }
-    @include screen-992 {
-      font-size: 35px;
-      line-height: 30px;
-    }
-    @include screen-768 {
-      font-size: 22px;
-      line-height: 25px;
-    }
-    @include portrait-phone {
-      text-align: center;
-    }
-  }
-}
-
-.surface-content-btn {
-  @include portrait-phone {
-    text-align: center;
-    margin-top: 20px;
-  }
-}
-.surface-btn {
-  background-color: $secondary-color;
-  color: $white-color;
-  @include screen-768 {
-    padding: 8px 10px;
-  }
-  @include portrait-phone {
-    text-align: center;
-  }
-}
 /******* Surface Section End ***********/
 
 /******* Trial Section Start ***********/
-.trail-section {
-  background-color: #f8ca36;
-  padding: 30px 0;
-}
 
-.trail-content {
-  margin: 0 140px;
-  gap: 43px;
-  @include large-screen {
-    margin: 0 80px;
-    gap: 20px;
-  }
-  @include screen-992 {
-    margin: 0 40px;
-    gap: 10px;
-  }
-}
-
-.trail-content-title {
-  position: relative;
-  h2 {
-    font-size: 77px;
-    line-height: 75px;
-    color: $secondary-color;
-    text-transform: uppercase;
-    font-style: italic;
-    span {
-      color: $primary-color;
-    }
-    @include screen-1350 {
-      font-size: 60px;
-      line-height: 60px;
-    }
-
-    @include large-screen {
-      font-size: 45px;
-      line-height: 40px;
-    }
-    @include screen-768 {
-      font-size: 28px;
-      line-height: 30px;
-    }
-    @include portrait-phone {
-      font-size: 25px;
-      line-height: 20px;
-    }
-  }
-}
-
-.trail-content-btn {
-  position: absolute;
-  right: 0%;
-  top: 45px;
-}
-
-.trail-btn {
-  background-color: $secondary-color;
-  color: $white-color;
-}
 /******* Trial Section End ***********/
 
-/******* Service Section Start ***********/
-.service-section {
-  background-color: $secondary-color;
-  padding: 60px 0;
+/******* htw Section Start ***********/
+.htw-section {
+  padding: 60px 0 184px 0;
+  position: relative;
+  z-index: 2;
+  @include large-screen {
+    background: $secondary-color;
+    padding: 60px 0 100px 0;
+  }
 }
 
-.service-top {
+.htw-bg {
+  left: 0;
+  bottom: 0;
+  width: 100% !important;
+  height: 100%;
+  z-index: -1;
+  position: absolute;
+  @include large-screen {
+    display: none;
+  }
+}
+.htw-shape {
+  position: absolute;
+  left: 0px;
+  bottom: 10px;
+  z-index: -3;
+  max-width: 100%;
+  @include large-screen {
+    display: none;
+  }
+}
+
+@media (min-width: 1600px) {
+  .htw-bg {
+    width: 100%;
+  }
+}
+.htw-top {
   margin: 0 30px;
   @include portrait-phone {
     display: block !important;
@@ -247,12 +299,14 @@
   }
 }
 
-.service-title {
+.htw-title {
   @include portrait-phone {
     text-align: center;
   }
   h2 {
+    text-transform: uppercase;
     color: $white-color;
+    font-weight: 700;
     font-size: 80px;
     @include screen-992 {
       font-size: 65px;
@@ -266,17 +320,17 @@
   }
 }
 
-.service-btn {
+.htw-btn {
   @include portrait-phone {
     text-align: center;
   }
   a {
     @include screen-768 {
-      padding: 7px 12px;
+      display: none !important;
     }
   }
 }
-.service-item {
+.htw-item {
   margin: 0 30px;
   margin-top: 48px;
   @include portrait-phone {
@@ -287,32 +341,62 @@
   }
 }
 
-.service-card {
+.htw-card {
   background-color: $white-color;
   border-radius: 10px;
+  height: 460px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: 0.3s;
+  @include large-screen {
+    height: 500px;
+  }
+  @include screen-992 {
+    height: 0px;
+    min-height: 500px;
+  }
+  @include screen-460 {
+    min-height: 500px;
+  }
+  .htw-thumb {
+    margin: 8px 8px 0 8px;
+    border-radius: 10px;
+
+    position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
+    img {
+      width: 100%;
+      transition: all 0.3s;
+      @include screen-992 {
+        height: 300px;
+      }
+    }
+    .htw-step {
+      position: absolute;
+      right: 20px;
+      top: 22px;
+      background-color: $white-color;
+      color: $primary-color;
+      padding: 1px 10px;
+      font-size: 16px;
+      font-weight: 700;
+      border-radius: 11px;
+      display: inline-block;
+    }
+  }
+
+  &:hover {
+    transform: translateY(-10px);
+    .htw-thumb {
+      img {
+        transform: scale(1.2);
+      }
+    }
+  }
 }
 
-.service-thumb {
-  padding: 8px 8px 0 8px;
-  position: relative;
-  img {
-    width: 100%;
-  }
-  .service-step {
-    position: absolute;
-    right: 20px;
-    top: 22px;
-    background-color: $white-color;
-    color: $primary-color;
-    padding: 1px 10px;
-    font-size: 16px;
-    font-weight: 700;
-    border-radius: 11px;
-    display: inline-block;
-  }
-}
-
-.service-content {
+.htw-content {
   padding: 27px 40px 40px 43px;
   text-align: center;
   h3 {
@@ -334,10 +418,4 @@
   }
 }
 
-.service-content-two {
-  padding: 27px 40px 68px 43px;
-  @include screen-1260 {
-    padding: 27px 40px 40px 43px;
-  }
-}
-/******* Service Section End ***********/
+/******* htw Section End ***********/
