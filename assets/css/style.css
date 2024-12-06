@@ -1009,9 +1009,121 @@ header {
           line-height: 23px; } }
 
 /********* Hero Section End *********/
-/******* Surface Section Start ***********/
-/******* Surface Section End ***********/
+/******* Ticker Section Start ***********/
+.ticker-section {
+  background-color: #f8ca36;
+  padding: 30px 0; }
+
+.ticker-wrapper {
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+  width: 100%;
+  padding-left: 100%; }
+  .ticker-wrapper .ticker-content {
+    display: inline-block;
+    white-space: nowrap;
+    -webkit-animation: 100s ticker linear infinite;
+    animation: 100s ticker linear infinite;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+    padding-right: 100%; }
+    .ticker-wrapper .ticker-content span {
+      font-size: 101px;
+      font-weight: 700;
+      line-height: 115px;
+      text-transform: uppercase;
+      font-family: "OwnersNarrowBold", Arial, sans-serif;
+      display: inline-block;
+      -webkit-transition: 0.3;
+      -o-transition: 0.3;
+      transition: 0.3; }
+      @media (max-width: 767.98px) {
+        .ticker-wrapper .ticker-content span {
+          font-size: 60px;
+          line-height: 60px; } }
+      .ticker-wrapper .ticker-content span + span {
+        margin-left: 10px; }
+      .ticker-wrapper .ticker-content span:hover {
+        -webkit-transform: translateY(-6px);
+        -ms-transform: translateY(-6px);
+        transform: translateY(-6px); }
+    .ticker-wrapper .ticker-content:hover {
+      -webkit-animation-play-state: paused;
+      animation-play-state: paused; }
+
+/******* Ticker Section End ***********/
 /******* Trial Section Start ***********/
+.trail-section {
+  background-color: #f8ca36;
+  padding: 30px 0;
+  -webkit-transform: rotate(2deg);
+  -ms-transform: rotate(2deg);
+  transform: rotate(2deg);
+  margin-bottom: -30px; }
+  @media (max-width: 575.98px) {
+    .trail-section {
+      padding: 30px 0 70px 0; } }
+
+.trail-content {
+  margin: 0 140px;
+  gap: 43px; }
+  @media (max-width: 1199.98px) {
+    .trail-content {
+      margin: 0 80px;
+      gap: 20px; } }
+  @media (max-width: 991.98px) {
+    .trail-content {
+      margin: 0 40px;
+      gap: 10px; } }
+  @media (max-width: 575.98px) {
+    .trail-content {
+      margin: 0 20px; } }
+
+.trail-content-thumb img {
+  max-width: 100%; }
+
+.trail-content-title {
+  position: relative; }
+  .trail-content-title h2 {
+    font-size: 77px;
+    line-height: 75px;
+    color: #f36a07;
+    text-transform: uppercase;
+    font-style: italic; }
+    .trail-content-title h2 span {
+      color: #121111; }
+    @media (max-width: 1350px) {
+      .trail-content-title h2 {
+        font-size: 60px;
+        line-height: 60px; } }
+    @media (max-width: 1199.98px) {
+      .trail-content-title h2 {
+        font-size: 45px;
+        line-height: 40px; } }
+    @media (max-width: 767.98px) {
+      .trail-content-title h2 {
+        font-size: 28px;
+        line-height: 30px; } }
+    @media (max-width: 575.98px) {
+      .trail-content-title h2 {
+        font-size: 20px;
+        line-height: 20px; } }
+
+.trail-content-btn {
+  position: absolute;
+  right: -12%;
+  top: 50px; }
+  @media (max-width: 575.98px) {
+    .trail-content-btn {
+      top: 75px; } }
+
+.trail-btn {
+  background-color: #f36a07;
+  color: #ffffff; }
+  @media (max-width: 575.98px) {
+    .trail-btn {
+      padding: 10px 15px; } }
+
 /******* Trial Section End ***********/
 /******* htw Section Start ***********/
 .htw-section {
@@ -1174,6 +1286,12 @@ header {
     max-width: 1400px;
     margin: 0 auto; }
 
+.ticker-primary {
+  color: #121111; }
+
+.ticker-secondary {
+  color: #f36a07; }
+
 @-webkit-keyframes toLeftFromRight {
   49% {
     -webkit-transform: translateX(-100%);
@@ -1261,3 +1379,21 @@ header {
 .fadeInDown-tada {
   -webkit-animation: fadeInDownTada 4s ease-in-out infinite;
   animation: fadeInDownTada 4s ease-in-out infinite; }
+
+@-webkit-keyframes ticker {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    visibility: visible; }
+  100% {
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0); } }
+
+@keyframes ticker {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    visibility: visible; }
+  100% {
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0); } }

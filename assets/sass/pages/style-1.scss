@@ -253,11 +253,145 @@
 
 /********* Hero Section End *********/
 
-/******* Surface Section Start ***********/
+/******* Ticker Section Start ***********/
+.ticker-section {
+  background-color: #f8ca36;
+  padding: 30px 0;
+}
 
-/******* Surface Section End ***********/
+.ticker-wrapper {
+  box-sizing: content-box;
+  width: 100%;
+  padding-left: 100%;
+
+  .ticker-content {
+    display: inline-block;
+    white-space: nowrap;
+    animation: 100s ticker linear infinite;
+    box-sizing: content-box;
+    padding-right: 100%;
+
+    span {
+      font-size: 101px;
+      font-weight: 700;
+      line-height: 115px;
+      text-transform: uppercase;
+      font-family: $heading-font;
+      display: inline-block;
+      transition: 0.3;
+
+      @include screen-768 {
+        font-size: 60px;
+        line-height: 60px;
+      }
+
+      + span {
+        margin-left: 10px;
+      }
+
+      &:hover {
+        transform: translateY(-6px);
+      }
+    }
+
+    &:hover {
+      animation-play-state: paused;
+    }
+  }
+}
+
+/******* Ticker Section End ***********/
 
 /******* Trial Section Start ***********/
+.trail-section {
+  background-color: #f8ca36;
+  padding: 30px 0;
+  transform: rotate(2deg);
+  margin-bottom: -30px;
+
+  @include portrait-phone {
+    padding: 30px 0 70px 0;
+  }
+}
+
+.trail-content {
+  margin: 0 140px;
+  gap: 43px;
+
+  @include large-screen {
+    margin: 0 80px;
+    gap: 20px;
+  }
+
+  @include screen-992 {
+    margin: 0 40px;
+    gap: 10px;
+  }
+
+  @include portrait-phone {
+    margin: 0 20px;
+  }
+}
+.trail-content-thumb {
+  img {
+    max-width: 100%;
+  }
+}
+
+.trail-content-title {
+  position: relative;
+
+  h2 {
+    font-size: 77px;
+    line-height: 75px;
+    color: $secondary-color;
+    text-transform: uppercase;
+    font-style: italic;
+
+    span {
+      color: $primary-color;
+    }
+
+    @include screen-1350 {
+      font-size: 60px;
+      line-height: 60px;
+    }
+
+    @include large-screen {
+      font-size: 45px;
+      line-height: 40px;
+    }
+
+    @include screen-768 {
+      font-size: 28px;
+      line-height: 30px;
+    }
+
+    @include portrait-phone {
+      font-size: 20px;
+      line-height: 20px;
+    }
+  }
+}
+
+.trail-content-btn {
+  position: absolute;
+  right: -12%;
+  top: 50px;
+
+  @include portrait-phone {
+    top: 75px;
+  }
+}
+
+.trail-btn {
+  background-color: $secondary-color;
+  color: $white-color;
+
+  @include portrait-phone {
+    padding: 10px 15px;
+  }
+}
 
 /******* Trial Section End ***********/
 
