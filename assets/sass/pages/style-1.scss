@@ -165,11 +165,16 @@
         }
         @include portrait-phone {
           gap: 3px;
+          width: 250px;
+          justify-content: left;
+          margin: auto;
           .inner {
             border: none;
+            margin-right: 0;
 
             p {
               font-size: 16px;
+              line-height: 23px;
             }
           }
         }

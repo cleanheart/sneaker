@@ -82,6 +82,9 @@
           margin-left: 10px;
         }
       }
+      @include portrait-phone {
+        margin-bottom: 0px;
+      }
     }
 
     :last-child {
