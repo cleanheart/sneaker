@@ -1011,14 +1011,17 @@ header {
 /********* Hero Section End *********/
 /******* Ticker Section Start ***********/
 .ticker-section {
-  background-color: #f8ca36;
-  padding: 30px 0; }
+  background-color: #f8ca36; }
 
 .ticker-wrapper {
   -webkit-box-sizing: content-box;
   box-sizing: content-box;
   width: 100%;
-  padding-left: 100%; }
+  padding-left: 100%;
+  -webkit-transform: rotate(-2deg);
+  -ms-transform: rotate(-2deg);
+  transform: rotate(-2deg);
+  padding: 30px 0; }
   .ticker-wrapper .ticker-content {
     display: inline-block;
     white-space: nowrap;
@@ -1052,21 +1055,52 @@ header {
       animation-play-state: paused; }
 
 /******* Ticker Section End ***********/
+/******* user-manual start***********/
+.user-manual {
+  padding: 100px 0;
+  position: relative; }
+  @media (max-width: 575.98px) {
+    .user-manual {
+      padding: 50px 0; } }
+  .user-manual .user-manual-title {
+    font-size: 80px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    text-align: center; }
+    @media (max-width: 575.98px) {
+      .user-manual .user-manual-title {
+        font-size: 35px; } }
+  .user-manual .img-wrapper {
+    margin-top: 50px; }
+    .user-manual .img-wrapper img {
+      width: 100%; }
+
+.usermanual-bg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  max-width: 100%;
+  z-index: -1; }
+  @media (max-width: 1600px) {
+    .usermanual-bg {
+      width: inherit;
+      max-width: 1920px; } }
+
+/******* user-manual end***********/
 /******* Trial Section Start ***********/
 .trail-section {
-  background-color: #f8ca36;
-  padding: 30px 0;
-  -webkit-transform: rotate(2deg);
-  -ms-transform: rotate(2deg);
-  transform: rotate(2deg);
-  margin-bottom: -30px; }
+  background-color: #f8ca36; }
   @media (max-width: 575.98px) {
     .trail-section {
       padding: 30px 0 70px 0; } }
 
 .trail-content {
   margin: 0 140px;
-  gap: 43px; }
+  gap: 43px;
+  -webkit-transform: rotate(2deg);
+  -ms-transform: rotate(2deg);
+  transform: rotate(2deg); }
   @media (max-width: 1199.98px) {
     .trail-content {
       margin: 0 80px;
@@ -1291,6 +1325,9 @@ header {
 
 .ticker-secondary {
   color: #f36a07; }
+
+.secondery-color {
+  color: #F85200; }
 
 @-webkit-keyframes toLeftFromRight {
   49% {

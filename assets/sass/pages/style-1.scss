@@ -256,13 +256,14 @@
 /******* Ticker Section Start ***********/
 .ticker-section {
   background-color: #f8ca36;
-  padding: 30px 0;
 }
 
 .ticker-wrapper {
   box-sizing: content-box;
   width: 100%;
   padding-left: 100%;
+  transform: rotate(-2deg);
+  padding: 30px 0;
 
   .ticker-content {
     display: inline-block;
@@ -301,13 +302,48 @@
 }
 
 /******* Ticker Section End ***********/
+/******* user-manual start***********/
+.user-manual {
+  padding: 100px 0;
+  position: relative;
+  @include portrait-phone {
+    padding: 50px 0;
+  }
+
+  .user-manual-title {
+    font-size: 80px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    text-align: center;
+    @include portrait-phone {
+      font-size: 35px;
+    }
+  }
+  .img-wrapper {
+    margin-top: 50px;
+    img {
+      width: 100%;
+    }
+  }
+}
+.usermanual-bg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  max-width: 100%;
+  z-index: -1;
+  @include screen-1600 {
+    width: inherit;
+    max-width: 1920px;
+  }
+}
+/******* user-manual end***********/
 
 /******* Trial Section Start ***********/
 .trail-section {
   background-color: #f8ca36;
-  padding: 30px 0;
-  transform: rotate(2deg);
-  margin-bottom: -30px;
+  // padding: 30px 0;
 
   @include portrait-phone {
     padding: 30px 0 70px 0;
@@ -317,6 +353,7 @@
 .trail-content {
   margin: 0 140px;
   gap: 43px;
+  transform: rotate(2deg);
 
   @include large-screen {
     margin: 0 80px;
