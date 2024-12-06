@@ -9,246 +9,248 @@
     padding: 100px 0px 50px 0;
   }
 
-  .hero-bg-shape {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    z-index: -1;
-  }
-  .hero-bg-1 {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    z-index: -1;
-    height: 100%;
-    @include screen-1300 {
-      min-height: 1080px;
-    }
-    @include screen-992 {
-      display: none;
-    }
-  }
-  .hero-left-img {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    gap: 25px;
-    bottom: 35px;
-    left: 2%;
-    img {
-      min-height: 215px;
-    }
-    @include screen-1300 {
-      display: none;
-    }
-  }
-
   .content-wrapper {
     display: flex;
     justify-content: space-between;
     position: relative;
+  }
+}
+.hero-bg-shape {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
 
-    .right-wrapper {
-      margin-left: auto;
-      .title-wrapper {
-        margin-right: 80px;
-        text-align: center;
-        .fst-title {
-          letter-spacing: 3px;
-          color: $white-color;
-          font-size: 124px;
-          text-shadow: 3px 4px 0 #852f00;
-          text-transform: uppercase;
-          line-height: 99px;
-          position: relative;
-          .pen {
-            display: inline-block;
-            position: relative;
-            &::after {
-              position: absolute;
-              content: "";
-              bottom: -5px;
-              right: 3px;
-              width: 15px;
-              height: 130px;
-              z-index: 5;
-              background: url("../../assets/images/pen-1.png");
-              @include portrait-phone {
-                bottom: -5px;
-                right: 1px;
-                width: 14px;
-                height: 77px;
-              }
-            }
-          }
-        }
-        .title-2 {
-          color: #c23400;
-          font-size: 124px;
-          text-shadow: 2px 2px 2px #fc8c55;
-          text-transform: uppercase;
-          line-height: 99px;
-          letter-spacing: 10px;
-          margin: 30px 0 40px 0;
-        }
-      }
-      .prize-wrapper {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        .prize-1 {
-          text-transform: uppercase;
-          color: #bb3f00;
-          display: flex;
-          align-items: center;
-          letter-spacing: 3px;
-          .border-eight {
-            width: 1px;
-            height: 35px;
-            border-radius: 6px;
-            margin: 0 19px 0 17px;
-            background: $white-color;
-            display: inline-block;
-          }
-          .white-color {
-            color: $white-color;
-            text-shadow: 3px 3px 0 #c23400;
-          }
-        }
-        .prize-2 {
-          font-size: 66px;
-          line-height: 72px;
-          color: $white-color;
-          margin-left: 20px;
-          text-shadow: 3px 3px 0 #c23400;
-        }
-      }
-      .text-icon {
-        margin-top: 20px;
-        padding-bottom: 40px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 13px;
-        .inner {
-          max-width: 242px;
-          display: flex;
-          gap: 8px;
-          padding-right: 9.5px;
-          border-right: 1px solid rgba($white-color, 0.5);
-          .icon {
-            width: 25px;
-            height: 25px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: $white-color;
-            flex-shrink: 0;
-          }
+.hero-bg-1 {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: -1;
+  height: 100%;
+  @include screen-1300 {
+    min-height: 1080px;
+  }
+  @include screen-992 {
+    display: none;
+  }
+}
+.hero-left-img {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  gap: 25px;
+  bottom: 35px;
+  left: 2%;
+  img {
+    min-height: 215px;
+  }
+  @include screen-1300 {
+    display: none;
+  }
+}
+.hero-right-wrapper {
+  margin-left: auto;
 
-          p {
-            font-size: 19px;
-            font-weight: 500;
-            color: $white-color;
-            line-height: 30px;
-            font-family: $body-font;
-          }
-        }
-        .last-inner {
-          padding-right: 0;
-          border-right: none;
-        }
-        .template-btn {
-          margin-left: 15px;
-        }
-        @include portrait-phone {
-          gap: 3px;
-          width: 250px;
-          justify-content: left;
-          margin: auto;
-          .inner {
-            border: none;
-            margin-right: 0;
+  .main-pen {
+    margin-left: 15%;
+  }
+  @include screen-1300 {
+    .hero-text-icon {
+      flex-wrap: wrap;
+    }
+    .main-pen {
+      margin-left: 13%;
+    }
+  }
+  @include screen-992 {
+    .main-pen {
+      display: none;
+    }
+  }
+  @include portrait-phone {
+    margin-right: auto;
 
-            p {
-              font-size: 16px;
-              line-height: 23px;
-            }
-          }
+    .hero-prize-wrapper {
+      .prize-1 {
+        font-size: 23px;
+        letter-spacing: 2px;
+        .border-eight {
+          margin: 0 10px;
         }
       }
-      .main-pen {
-        margin-left: 15%;
-      }
-      @include screen-1300 {
-        .title-wrapper {
-          margin-right: 0;
-          .fst-title {
-            font-size: 99px;
-          }
-          .title-2 {
-            font-size: 99px;
-          }
-        }
-        .text-icon {
-          flex-wrap: wrap;
-        }
-        .main-pen {
-          margin-left: 13%;
-        }
-      }
-      @include screen-992 {
-        .title-wrapper {
-          .fst-title {
-            max-width: 550px;
-            margin: auto;
-            &::after {
-              right: 164px;
-            }
-          }
-        }
-        .main-pen {
-          display: none;
-        }
-      }
-      @include portrait-phone {
-        margin-right: auto;
-        .title-wrapper {
-          .fst-title {
-            max-width: 330px;
-            font-size: 55px;
-            line-height: 60px;
-            &::after {
-              right: 30%;
-              width: 14px;
-              height: 81px;
-            }
-          }
-          .title-2 {
-            line-height: 70px;
-            letter-spacing: 5px;
-            margin: 5px 0 0px 0;
-            font-size: 45px;
-          }
-        }
-        .prize-wrapper {
-          .prize-1 {
-            font-size: 23px;
-            letter-spacing: 2px;
-            .border-eight {
-              margin: 0 10px;
-            }
-          }
-          .prize-2 {
-            font-size: 39px;
-          }
-        }
+      .prize-2 {
+        font-size: 39px;
       }
     }
   }
 }
+.hero-title-wrapper {
+  margin-right: 80px;
+  text-align: center;
+  .fst-title {
+    letter-spacing: 3px;
+    color: $white-color;
+    font-size: 124px;
+    text-shadow: 3px 4px 0 #852f00;
+    text-transform: uppercase;
+    line-height: 99px;
+    position: relative;
+    .pen {
+      display: inline-block;
+      position: relative;
+      &::after {
+        position: absolute;
+        content: "";
+        bottom: -5px;
+        right: 3px;
+        width: 15px;
+        height: 130px;
+        z-index: 5;
+        background: url("../../assets/images/pen-1.png");
+        @include portrait-phone {
+          bottom: -5px;
+          right: 1px;
+          width: 14px;
+          height: 77px;
+        }
+      }
+    }
+  }
+  .title-2 {
+    color: #c23400;
+    font-size: 124px;
+    text-shadow: 2px 2px 2px #fc8c55;
+    text-transform: uppercase;
+    line-height: 99px;
+    letter-spacing: 10px;
+    margin: 30px 0 40px 0;
+  }
+  @include screen-1300 {
+    margin-right: 0;
+    .fst-title {
+      font-size: 99px;
+    }
+    .title-2 {
+      font-size: 99px;
+    }
+  }
+  @include screen-992 {
+    .fst-title {
+      max-width: 550px;
+      margin: auto;
+      &::after {
+        right: 164px;
+      }
+    }
+  }
+  @include portrait-phone {
+    .fst-title {
+      max-width: 330px;
+      font-size: 55px;
+      line-height: 60px;
+      &::after {
+        right: 30%;
+        width: 14px;
+        height: 81px;
+      }
+    }
+    .title-2 {
+      line-height: 70px;
+      letter-spacing: 5px;
+      margin: 5px 0 0px 0;
+      font-size: 45px;
+    }
+  }
+}
+.hero-prize-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .prize-1 {
+    text-transform: uppercase;
+    color: #bb3f00;
+    display: flex;
+    align-items: center;
+    letter-spacing: 3px;
+    .border-eight {
+      width: 1px;
+      height: 35px;
+      border-radius: 6px;
+      margin: 0 19px 0 17px;
+      background: $white-color;
+      display: inline-block;
+    }
+    .white-color {
+      color: $white-color;
+      text-shadow: 3px 3px 0 #c23400;
+    }
+  }
+  .prize-2 {
+    font-size: 66px;
+    line-height: 72px;
+    color: $white-color;
+    margin-left: 20px;
+    text-shadow: 3px 3px 0 #c23400;
+  }
+}
+.hero-text-icon {
+  margin-top: 20px;
+  padding-bottom: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 13px;
+  .inner {
+    max-width: 242px;
+    display: flex;
+    gap: 8px;
+    padding-right: 9.5px;
+    border-right: 1px solid rgba($white-color, 0.5);
+    .icon {
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: $white-color;
+      flex-shrink: 0;
+    }
+
+    p {
+      font-size: 19px;
+      font-weight: 500;
+      color: $white-color;
+      line-height: 30px;
+      font-family: $body-font;
+    }
+  }
+  .last-inner {
+    padding-right: 0;
+    border-right: none;
+  }
+  .template-btn {
+    margin-left: 15px;
+  }
+  @include portrait-phone {
+    gap: 3px;
+    width: 250px;
+    justify-content: left;
+    margin: auto;
+    .inner {
+      border: none;
+      margin-right: 0;
+
+      p {
+        font-size: 16px;
+        line-height: 23px;
+      }
+    }
+  }
+}
+
 /********* Hero Section End *********/
 
 /******* Surface Section Start ***********/
