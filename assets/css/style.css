@@ -284,6 +284,9 @@ header {
           display: inline-block;
           -webkit-animation: 0.3s toLeftFromRight forwards;
           animation: 0.3s toLeftFromRight forwards; }
+      @media (max-width: 991.98px) {
+        header .header-nav .user-cart-2 {
+          margin-left: auto; } }
       @media (max-width: 460px) {
         header .header-nav .user-cart-2 {
           display: none !important; } }
@@ -348,7 +351,9 @@ header {
   z-index: 10;
   -webkit-animation: 1s custom-fadeInDown;
   animation: 1s custom-fadeInDown;
-  background-color: #ffffff; }
+  background-color: #ffffff;
+  -webkit-box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); }
   .sticky .header-top {
     display: none; }
   .sticky .container {
@@ -383,8 +388,8 @@ header {
   position: fixed;
   background: #ffffff;
   top: 0;
-  right: -350px;
-  width: 300px;
+  right: -100%;
+  width: 100%;
   height: 100vh;
   -webkit-transition: all 0.3s;
   -o-transition: all 0.3s;
@@ -392,7 +397,7 @@ header {
   z-index: 15;
   overflow: scroll; }
   .mobile-menu.active {
-    right: 0 !important; }
+    right: 0% !important; }
   .mobile-menu .top {
     background: #f36a07;
     display: -webkit-box;
@@ -547,6 +552,8 @@ header {
     line-height: 26px;
     font-family: "Poppins", sans-serif;
     width: 90%; }
+  .footer-item .footer-email button {
+    padding: 0; }
 
 @media (max-width: 1199.98px) {
   .footer-item {
@@ -557,6 +564,10 @@ header {
     .footer-item .footer-email {
       margin: 0 auto; } }
 
+@media (max-width: 575.98px) {
+  .footer-widget {
+    margin-bottom: 20px; } }
+
 .footer-widget span {
   color: #121111;
   font-size: 20px;
@@ -564,12 +575,15 @@ header {
   font-weight: 700;
   text-transform: uppercase;
   display: inline-block; }
+  @media (max-width: 575.98px) {
+    .footer-widget span {
+      line-height: 40px; } }
 
 .footer-widget .footer-content {
   margin-top: 40px; }
   @media (max-width: 400px) {
     .footer-widget .footer-content {
-      margin-top: 20px; } }
+      margin-top: 0px; } }
   .footer-widget .footer-content li {
     margin-bottom: 15px; }
     .footer-widget .footer-content li a {
@@ -961,26 +975,28 @@ header {
         .hero-area .content-wrapper .right-wrapper .main-pen {
           display: none; } }
       @media (max-width: 575.98px) {
-        .hero-area .content-wrapper .right-wrapper .title-wrapper .fst-title {
-          max-width: 330px;
-          font-size: 55px;
-          line-height: 60px; }
-          .hero-area .content-wrapper .right-wrapper .title-wrapper .fst-title::after {
-            right: 30%;
-            width: 14px;
-            height: 81px; }
-        .hero-area .content-wrapper .right-wrapper .title-wrapper .title-2 {
-          line-height: 70px;
-          letter-spacing: 5px;
-          margin: 5px 0 0px 0;
-          font-size: 45px; }
-        .hero-area .content-wrapper .right-wrapper .prize-wrapper .prize-1 {
-          font-size: 23px;
-          letter-spacing: 2px; }
-          .hero-area .content-wrapper .right-wrapper .prize-wrapper .prize-1 .border-eight {
-            margin: 0 10px; }
-        .hero-area .content-wrapper .right-wrapper .prize-wrapper .prize-2 {
-          font-size: 39px; } }
+        .hero-area .content-wrapper .right-wrapper {
+          margin-right: auto; }
+          .hero-area .content-wrapper .right-wrapper .title-wrapper .fst-title {
+            max-width: 330px;
+            font-size: 55px;
+            line-height: 60px; }
+            .hero-area .content-wrapper .right-wrapper .title-wrapper .fst-title::after {
+              right: 30%;
+              width: 14px;
+              height: 81px; }
+          .hero-area .content-wrapper .right-wrapper .title-wrapper .title-2 {
+            line-height: 70px;
+            letter-spacing: 5px;
+            margin: 5px 0 0px 0;
+            font-size: 45px; }
+          .hero-area .content-wrapper .right-wrapper .prize-wrapper .prize-1 {
+            font-size: 23px;
+            letter-spacing: 2px; }
+            .hero-area .content-wrapper .right-wrapper .prize-wrapper .prize-1 .border-eight {
+              margin: 0 10px; }
+          .hero-area .content-wrapper .right-wrapper .prize-wrapper .prize-2 {
+            font-size: 39px; } }
 
 /********* Hero Section End *********/
 /******* Surface Section Start ***********/

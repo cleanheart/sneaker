@@ -33,6 +33,9 @@
       font-family: $body-font;
       width: 90%;
     }
+    button {
+      padding: 0;
+    }
   }
   @include large-screen {
     margin-bottom: 30px;
@@ -49,6 +52,9 @@
 }
 
 .footer-widget {
+  @include portrait-phone {
+    margin-bottom: 20px;
+  }
   span {
     color: $primary-color;
     font-size: 20px;
@@ -56,12 +62,15 @@
     font-weight: 700;
     text-transform: uppercase;
     display: inline-block;
+    @include portrait-phone {
+      line-height: 40px;
+    }
   }
 
   .footer-content {
     margin-top: 40px;
     @include screen-400 {
-      margin-top: 20px;
+      margin-top: 0px;
     }
     li {
       margin-bottom: 15px;

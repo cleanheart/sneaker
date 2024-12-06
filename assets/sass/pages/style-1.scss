@@ -214,6 +214,7 @@
         }
       }
       @include portrait-phone {
+        margin-right: auto;
         .title-wrapper {
           .fst-title {
             max-width: 330px;
